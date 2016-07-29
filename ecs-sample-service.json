@@ -1,0 +1,27 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "ecs-sample-service",
+            "image": "yuriyko/ecs-sample-service:latest",
+            "memory": 500,
+            "cpu": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 8080,
+                    "containerPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "environment": null,
+            "mountPoints": null,
+            "volumesFrom": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null
+        }
+    ],
+    "volumes": [],
+    "family": "ecs-sample-service"
+}

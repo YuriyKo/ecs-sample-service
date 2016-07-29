@@ -1,0 +1,16 @@
+{
+  "name": "ecs-sample-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sample service for AWS ECS",
+  "author": "Yuriy Kozhynov <yuriy@kozhynov.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.12.3",
+    "morgan": "1.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuriyKo/ecs-sample-service.git"
+  }
+}
