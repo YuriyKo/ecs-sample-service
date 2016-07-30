@@ -1,0 +1,51 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "redis",
+            "image": "redis",
+            "memory": "250",
+            "cpu": "256",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": "6379",
+                    "containerPort": "6379",
+                    "protocol": "tcp"
+                }
+            ],
+            "environment": null,
+            "mountPoints": null,
+            "volumesFrom": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null
+        },
+        {
+            "name": "ecs-sample-service",
+            "image": "854016806181.dkr.ecr.us-east-1.amazonaws.com/yuriyko/ecs-sample-service:redis",
+            "memory": "250",
+            "cpu": "256",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": "8080",
+                    "containerPort": "8080",
+                    "protocol": "tcp"
+                }
+            ],
+            "environment": null,
+            "links": [
+                "redis:redis"
+            ],
+            "mountPoints": null,
+            "volumesFrom": null,
+            "extraHosts": null,
+            "logConfiguration": null,
+            "ulimits": null,
+            "dockerLabels": null
+        }
+    ],
+    "volumes": [],
+    "family": "ecs-sample-service-redis"
+}
