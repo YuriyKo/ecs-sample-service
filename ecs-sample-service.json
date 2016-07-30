@@ -1,27 +1,49 @@
 {
-    "containerDefinitions": [
+  "requiresAttributes": [
+    {
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    }
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:854016806181:task-definition/ecs-sample-service:4",
+  "status": "ACTIVE",
+  "revision": 4,
+  "taskRoleArn": null,
+  "containerDefinitions": [
+    {
+      "volumesFrom": [],
+      "memory": 500,
+      "extraHosts": null,
+      "dnsServers": null,
+      "disableNetworking": null,
+      "dnsSearchDomains": null,
+      "portMappings": [
         {
-            "name": "ecs-sample-service",
-            "image": "yuriyko/ecs-sample-service:latest",
-            "memory": 500,
-            "cpu": 512,
-            "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 8080,
-                    "containerPort": 8080,
-                    "protocol": "tcp"
-                }
-            ],
-            "environment": null,
-            "mountPoints": null,
-            "volumesFrom": null,
-            "extraHosts": null,
-            "logConfiguration": null,
-            "ulimits": null,
-            "dockerLabels": null
+          "hostPort": 8080,
+          "containerPort": 8080,
+          "protocol": "tcp"
         }
-    ],
-    "volumes": [],
-    "family": "ecs-sample-service"
+      ],
+      "hostname": null,
+      "essential": true,
+      "entryPoint": null,
+      "mountPoints": [],
+      "name": "ecs-sample-service",
+      "ulimits": null,
+      "dockerSecurityOptions": null,
+      "environment": [],
+      "links": null,
+      "workingDirectory": null,
+      "readonlyRootFilesystem": null,
+      "image": "854016806181.dkr.ecr.us-east-1.amazonaws.com/yuriyko/ecs-sample-service:latest",
+      "command": null,
+      "user": null,
+      "dockerLabels": null,
+      "logConfiguration": null,
+      "cpu": 512,
+      "privileged": null
+    }
+  ],
+  "volumes": [],
+  "family": "ecs-sample-service"
 }
